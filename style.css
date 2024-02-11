@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(45deg, #020b81, #4c02d4);
+    align-items: center;
+}
+.container h1{
+     font-size: 30px;
+     color: white;
+     font-weight: 600;
+     margin-bottom: 20px;
+}
+.gameContainer{
+  
+    display: grid;
+    grid-template-columns: repeat(3, 8vw);
+    grid-template-rows: repeat(3, 8vw);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px 0;
+    position: relative;
+}
+.box{
+    border: 1px solid rgb(192, 192, 192);
+    font-size: 5VW;
+    cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   font-weight: 500;
+}
+.box:hover{
+    background-color: rgb(3, 71, 71);
+}
+.gameInfo{
+    
+    /* padding: 0 35px; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.info{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+ #reset{
+    margin-left: 5rem;
+    padding: 10px 25px;
+    background-color: #4c02d4;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+.line{
+    background-color: #fff;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 480px)
+{
+    .container h1{
+        font-size: 15px;
+        margin: 40px 100px;
+        /* margin-bottom: 2rem ; */
+    }
+ .gameContainer{
+    display: grid;
+    flex-direction: column;
+    margin: 0px 100px;
+    }
+    
+    .gameInfo{ 
+        /* margin-top: 3rem;  */
+        margin: 30px 100px;
+ 
+    }
+    #reset{
+        margin-top: 20px;
+        font-size: .8rem;
+    }
+    .info{
+        font-size: 20px;  
+    }
+    
+}
